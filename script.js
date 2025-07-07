@@ -1,4 +1,4 @@
-const TASA_REFERENCIA_INTERNA = 39.58;
+const TASA_REFERENCIA_INTERNA = 100.00;
 
 const listaCompras = document.getElementById('lista-compras');
 const totalBsSpan = document.getElementById('total-bs');
@@ -18,10 +18,21 @@ const modalTitulo = document.getElementById('modal-titulo');
 let articuloActual = null;
 
 let articulos = [
-  { id: 1, nombre: 'Leche (1L)', precioSugerido: 1.50, cantidad: 0, precioReal: 0, agregado: false, incluido: false },
-  { id: 2, nombre: 'Huevos (docena)', precioSugerido: 2.00, cantidad: 0, precioReal: 0, agregado: false, incluido: false },
-  { id: 3, nombre: 'Pan de molde', precioSugerido: 1.00, cantidad: 0, precioReal: 0, agregado: false, incluido: false },
-  { id: 4, nombre: 'Queso blanco (kg)', precioSugerido: 4.50, cantidad: 0, precioReal: 0, agregado: false, incluido: false },
+  { id: 1, nombre: 'Leche (1L)', precioSugerido: 100.00, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 2, nombre: 'Huevos (docena)', precioSugerido: 100.00, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 3, nombre: 'Pan cuadrado', precioSugerido: 100.00, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 4, nombre: 'Queso blanco (kg)', precioSugerido: 100.00, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 4, nombre: 'Arroz', precioSugerido: 100.00, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 5, nombre: 'Azúcar', precioSugerido: 100.00, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 6, nombre: 'Café', precioSugerido: 100.00, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 7, nombre: 'Queso amarillo', precioSugerido: 100.000, cantidad: 1, precioReal: 0, agregado: false, incluido: false },
+  { id: 8, nombre: 'Aceite', precioSugerido:100.00, cantidad: 0, precioReal: 1, agregado: false, incluido: false },
+  { id: 9, nombre: 'Pasta', precioSugerido: 100.00, cantidad: 0, precioReal: 1, agregado: false, incluido: false },
+  { id: 10, nombre: 'Harina', precioSugerido: 100.00, cantidad: 0, precioReal: 1, agregado: false, incluido: false },
+  { id: 7, nombre: 'Carne', precioSugerido: 100.00, cantidad: 0, precioReal: 1, agregado: false, incluido: false },
+  { id: 8, nombre: 'Pollo', precioSugerido: 100.00, cantidad: 0, precioReal: 1, agregado: false, incluido: false },
+  { id: 9, nombre: 'Toortilla', precioSugerido: 100.00, cantidad: 0, precioReal: 1, agregado: false, incluido: false },
+  { id: 10, nombre: 'Mantequilla', precioSugerido: 100.00, cantidad: 0, precioReal: 1, agregado: false, incluido: false },
 ];
 
 function renderizarLista() {
